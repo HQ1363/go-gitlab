@@ -1,4 +1,4 @@
-module github.com/xanzy/go-gitlab
+module github.com/HQ1363/go-gitlab
 
 go 1.14
 
