@@ -1,5 +1,7 @@
 module github.com/xanzy/go-gitlab
 
+go 1.14
+
 require (
 	github.com/google/go-querystring v1.0.0
 	golang.org/x/net v0.0.0-20181108082009-03003ca0c849 // indirect

@@ -705,7 +705,7 @@ type ErrorResponse struct {
 func (e *ErrorResponse) Error() string {
 	path, _ := url.QueryUnescape(e.Response.Request.URL.Path)
 	u := fmt.Sprintf("%s://%s%s", e.Response.Request.URL.Scheme, e.Response.Request.URL.Host, path)
-	return fmt.Sprintf("%s %s: %d %s", e.Response.Request.Method, u, e.Response.StatusCode, e.Message)
+	return fmt.Sprintf("%s %s: %d %s, body: [%s]", e.Response.Request.Method, u, e.Response.StatusCode, e.Message, string(e.Body))
 }
 
 // CheckResponse checks the API response for errors, and returns them if present.
